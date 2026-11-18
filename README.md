@@ -1,125 +1,138 @@
-# Terraformer Tools — Minecraft Bedrock add-on
+<p align="center">
+  <img src="docs/images/banner.png" alt="Terraformer Tools — instant, unbreakable emerald tools that dig 1×1, 2×2 or 3×3" width="100%">
+</p>
 
-An emerald pickaxe and spade for terraforming. They mine **instantly**, **never break**, and dig a **1 × 1, 2 × 2 or 3 × 3** area with every block you break. A guide book in game explains everything.
+<p align="center">
+  <a href="https://github.com/sculley/terraformer-tools/releases/latest"><img src="https://img.shields.io/github/v/release/sculley/terraformer-tools?label=download&color=1fc965&style=for-the-badge" alt="Latest release"></a>
+  <a href="https://github.com/sculley/terraformer-tools/actions/workflows/release.yml"><img src="https://img.shields.io/github/actions/workflow/status/sculley/terraformer-tools/release.yml?style=for-the-badge&label=build" alt="Build status"></a>
+  <img src="https://img.shields.io/badge/Minecraft-Bedrock%201.26.40%2B-5b8c3a?style=for-the-badge" alt="Minecraft Bedrock 1.26.40+">
+  <img src="https://img.shields.io/badge/PS5%20%C2%B7%20Xbox%20%C2%B7%20Switch%20%C2%B7%20PC%20%C2%B7%20Mobile-supported-0e5c33?style=for-the-badge" alt="Platforms">
+</p>
 
-![Terraformer Pickaxe, Terraformer Spade and the guide](images/textures.png)
+**Terraformer Tools** is a lightweight Minecraft Bedrock add-on for reshaping the land fast. An emerald **pickaxe** and **spade** that mine **instantly**, **never break**, and dig a **1 × 1, 2 × 2 or 3 × 3** area with every block you break. Flatten hills, dig shafts, carve tunnels and clear whole beaches in minutes.
 
-Built on the stable Script API — `@minecraft/server` 2.9.0 and `@minecraft/server-ui` 2.1.0 (Minecraft Bedrock 1.26.40 or newer). No experimental toggles needed. Works on PS5, Xbox, Switch, Windows, iOS and Android.
+No experimental toggles. Works on every Bedrock platform, including console via Realms.
 
-## The tools
+<p align="center">
+  <img src="docs/images/items.png" alt="The Terraformer Pickaxe, the Terraformer Spade and the Terraformer Tools Guide" width="100%">
+</p>
 
-| | Terraformer Pickaxe | Terraformer Spade |
-|---|---|---|
-| Digs | stone, ores, deepslate, netherrack, metal blocks, rails — anything a pickaxe mines | dirt, grass, sand, gravel, clay, snow, soul sand — anything a shovel mines |
-| Speed | instant | instant |
-| Durability | none — never breaks | none — never breaks |
-| Harvest level | diamond (obsidian and ancient debris drop) | diamond |
-| Area | 1 × 1, 2 × 2 or 3 × 3 (starts at 3 × 3) | 1 × 1, 2 × 2 or 3 × 3 (starts at 3 × 3) |
+## ⬇️ Download
 
-### Changing the size
+Grab **`Terraformer_Tools-x.y.z.mcaddon`** from the [latest release](https://github.com/sculley/terraformer-tools/releases/latest).
 
-Hold the tool, **sneak and press Use**, then pick a size from the menu.
+## ✨ Features
 
-| Device | Sneak + Use |
+- **Instant mining**: every block the tool is meant for breaks in a single hit, even obsidian.
+- **Unbreakable**: no durability, so the tools never wear out.
+- **1 × 1, 2 × 2 or 3 × 3**: pick the size from a menu, and each tool remembers its own setting.
+- **Pickaxe and spade**: the pickaxe takes stone, ores, deepslate, netherrack and metal blocks. The spade takes dirt, grass, sand, gravel, clay and snow. Both mine at diamond level, so obsidian and ancient debris drop.
+- **Safe by design**: the pickaxe's area only takes pickaxe blocks and the spade's only takes spade blocks, so chests, logs, glass and your builds stay put. Bedrock, portals, barriers and command blocks are never touched. Water and lava are left in place.
+- **Normal drops**: blocks broken by the area drop their items just like mining them. In Creative nothing drops.
+- **Terraformer Tools Guide**: every player gets one on first join. It explains everything, including the recipes, in-game.
+
+## 🎮 How to play
+
+| Action | How |
 |---|---|
-| PS5 / controller | hold sneak (R3 by default) + press L2 |
-| PC | hold Shift + right-click |
-| Touch | tap sneak, then tap and hold the screen |
+| Dig | Mine as normal. With 2 × 2 or 3 × 3 the rest of the area breaks too. |
+| Change the size | Hold the tool, **sneak + use**, and pick **1 × 1**, **2 × 2** or **3 × 3**. |
+| Check the size | Use the tool without sneaking. It's also in the tool's description. |
+| Read the guide | Hold the **Terraformer Tools Guide** and press use. |
 
-Each tool remembers its own size, shown in its description (e.g. *Mining area: 2 × 2*). Use the tool **without** sneaking to see its current size on screen.
+**Sneak + use** on each device:
+
+| PS5 / controller | PC | Touch |
+|---|---|---|
+| Hold sneak (R3 by default) + press L2 | Hold Shift + right-click | Tap sneak, then tap and hold the screen |
+
+New tools start at **3 × 3**.
 
 ### Where the area goes
 
-The area is a flat square on the face of the block you hit:
+The area is a flat square on the face of the block you hit. Dig into a wall for a tunnel, straight down for a shaft, or along the ground to flatten it.
 
-- **3 × 3** — centred on the block you hit.
-- **2 × 2** — the block you hit, plus the blocks above it and to your right. On floors and ceilings it spreads to your right and away from you.
-- **1 × 1** — just that block, like a normal tool.
+<p align="center">
+  <img src="docs/images/sizes.png" alt="1×1 breaks only the block you hit. 2×2 breaks the block you hit plus the blocks above it and to your right. 3×3 is centred on the block you hit." width="80%">
+</p>
 
-Dig into a wall for a tunnel, dig straight down for a shaft, or dig the ground to flatten it.
+On floors and ceilings, a **2 × 2** spreads to your right and away from you.
 
-### Safety rules
+## 🛠️ Recipes
 
-- The pickaxe's area only takes pickaxe blocks, and the spade's only takes spade blocks. Chests, logs, glass, builds next to your work stay where they are. If you hit a block the tool isn't meant for (dirt with the pickaxe, say), only that block breaks.
-- Bedrock, portals and portal frames, barriers, command and structure blocks, light blocks and reinforced deepslate are never touched.
-- Water and lava aren't removed.
-- Blocks broken by the area drop their items like normal mining. In Creative nothing drops.
+All crafted on a crafting table. Everything is also in the creative inventory (Equipment tab), and the recipes are in the guide in-game.
 
-## Recipes
+<p align="center">
+  <img src="docs/images/recipes.png" alt="Recipes. Terraformer Pickaxe: three emeralds across the top, two iron ingots down the middle. Terraformer Spade: one emerald at the top middle, two iron ingots below it. Terraformer Tools Guide: book and emerald in any arrangement." width="100%">
+</p>
 
-Crafting table, top row first. **E** = Emerald, **I** = Iron Ingot.
+## 📦 Installing
 
-| Terraformer Pickaxe | Terraformer Spade |
-|---|---|
-| `E E E` | `· E ·` |
-| `· I ·` | `· I ·` |
-| `· I ·` | `· I ·` |
+### Windows / Android / iOS
+1. Download the `.mcaddon` and open it. Minecraft imports both packs.
+2. Create or edit a world → **Behavior Packs** → activate **Terraformer Tools**. The resource pack is added automatically.
 
-**Terraformer Tools Guide:** Book + Emerald, shapeless (any slots).
+### PS5, Xbox and Switch
+Consoles can't import add-on files directly, so bring the add-on in with a world:
+1. Import the `.mcaddon` on a phone, tablet or PC and create a world with it active.
+2. Upload that world to your **Realm** (Realm settings → *Replace world*).
+3. Join the Realm from your console. The packs download automatically.
 
-All three items are also in the creative inventory (Equipment tab).
+You can also host the world on a phone or PC and join it from your console as a friend.
 
-## The guide book
+> Like all add-ons, Terraformer Tools turns off achievements for the world it's enabled in.
 
-Every player gets a **Terraformer Tools Guide** the first time they join a world with the add-on. Use it to open a chaptered menu:
-
-1. **The tools** — what they dig and what makes them special
-2. **Changing the size** — the sneak + use menu, with PS5, PC and touch controls
-3. **Where the area goes** — how 1 × 1, 2 × 2 and 3 × 3 are aimed
-4. **Crafting recipes** — the pickaxe, spade and guide recipes
-5. **Good to know** — drops, protected blocks, water and lava
-
-## Installing
-
-### Build the `.mcaddon`
-
-```sh
-python3 tools/build.py        # → dist/Terraformer_Tools.mcaddon
-```
-
-### On a phone, tablet or Windows PC
-
-Open `Terraformer_Tools.mcaddon` — Minecraft imports both packs. Then, in a world's settings, turn on **Behavior Packs → Terraformer Tools** (the resource pack is added automatically; if not, turn on **Resource Packs → Terraformer Tools Resources** too).
-
-### On PS5 (or other consoles)
-
-Consoles can't import `.mcaddon` files directly, so the add-on has to arrive with a world:
-
-1. **Realm (easiest):** import the `.mcaddon` on a phone, tablet or PC, create a world with both packs active, then use *Realm settings → Replace world* to upload it. Join the Realm from your PS5 and the packs download automatically. To add it to an existing Realm world, download the Realm world on that device, activate the packs on it, and upload it back.
-2. **Host from another device:** host the world with the packs on a phone or PC and join it from the PS5 as a friend.
-
-Like all add-ons, turning it on disables achievements for that world.
-
-## Files
+## 🧑‍💻 Development
 
 ```
-Terraformer_Tools_BP/            behavior pack
-  manifest.json
-  items/                         pickaxe, spade and guide item definitions
-  recipes/                       the three crafting recipes
+Terraformer_Tools_BP/            behaviour pack
+  items/ recipes/                item and recipe definitions
   scripts/main.js                wires game events to the features below
   scripts/tools.js               tool definitions, size setting, which blocks may be dug
-  scripts/mining.js              the 2 × 2 / 3 × 3 area mining
+  scripts/mining.js              2 × 2 / 3 × 3 area mining
   scripts/size_menu.js           sneak + use size picker
-  scripts/guide.js               guide book chapters and first-join gift
-Terraformer_Tools_RP/            resource pack
-  textures/items/                16 × 16 item textures
-  textures/ui/                   size icons for the menu
-  texts/en_US.lang               item names
-tools/render_textures.py         draws every texture (python3 + Pillow)
-tools/build.py                   zips both packs into dist/Terraformer_Tools.mcaddon
+  scripts/guide.js               the guide book and first-join gift
+Terraformer_Tools_RP/            resource pack: textures, names, icon
+tools/                           build script and artwork generators
+docs/images/                     README artwork
 ```
 
-## How it works
+Built on the stable Script API: `@minecraft/server` 2.9.0 and `@minecraft/server-ui` 2.1.0.
 
-- **Instant mining:** each tool's `minecraft:digger` gives a dig speed of 10,000 on its block types — fast enough to break even obsidian in a single tick.
-- **No durability:** the items have no `minecraft:durability` component, so there is nothing to wear out.
-- **Area mining:** on `world.beforeEvents.playerBreakBlock` the script reads the tool's size, finds the face you hit with `getBlockFromViewDirection`, and on the next tick breaks the rest of the square with `setblock … air destroy` so drops and break effects match normal mining.
-- **Size setting:** stored on the item itself as a dynamic property (`terraformer:size`), so every tool keeps its own setting, even when traded or put in a chest.
+**How it works**
+- **Instant mining:** each tool's `minecraft:digger` gives a dig speed of 10,000 on its block types, enough to break obsidian in one tick.
+- **No durability:** the items have no `minecraft:durability` component, so there's nothing to wear out.
+- **Area mining:** on `world.beforeEvents.playerBreakBlock` the script reads the tool's size and finds the face you hit, then on the next tick breaks the rest of the square with `setblock … air destroy`, so drops and effects match normal mining.
+- **Size setting:** stored on the item as a dynamic property (`terraformer:size`), so each tool keeps its own setting, even in a chest or traded.
 
-## Changing things
+**Build locally**
 
-- **Bigger areas:** add sizes to `SIZES` in `scripts/tools.js` (e.g. `[1, 2, 3, 5]`) and a matching `textures/ui/terraformer_size_5.png`.
-- **Default size:** change `DEFAULT_SIZE` in `scripts/tools.js`.
-- **Protected blocks:** add IDs to `NEVER_BREAK` in `scripts/tools.js`.
-- **Artwork:** edit `tools/render_textures.py` and run it to redraw every texture.
+```bash
+python tools/build.py          # → dist/Terraformer_Tools-<manifest version>.mcaddon
+python tools/build.py 1.2.0    # stamp a specific version into the package
+```
+
+**Regenerate artwork** (needs Pillow and the DejaVu fonts)
+
+```bash
+python tools/render_textures.py   # item textures, menu icons and pack icons
+python tools/render_docs.py       # README images
+```
+
+**Customise**
+- More sizes: add them to `SIZES` in `scripts/tools.js` (e.g. `[1, 2, 3, 5]`) with a matching `textures/ui/terraformer_size_5.png`.
+- Default size: `DEFAULT_SIZE` in `scripts/tools.js`.
+- Protected blocks: add IDs to `NEVER_BREAK` in `scripts/tools.js`.
+
+**Release:** push a version tag and GitHub Actions validates the packs, builds the `.mcaddon` and `.mcpack` files, and attaches them to a new release:
+
+```bash
+git tag v1.2.0
+git push origin v1.2.0
+```
+
+Every push and pull request is also built, with the files available as a workflow artifact.
+
+---
+
+<sub>All textures and artwork are original and generated by the scripts in <code>tools/</code>. Not affiliated with Mojang or Microsoft.</sub>

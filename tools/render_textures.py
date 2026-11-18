@@ -220,12 +220,6 @@ def main():
     icon.save(RP / "pack_icon.png")
     BP.mkdir(exist_ok=True)
     icon.save(BP / "pack_icon.png")
-    # preview sheet for the README
-    sheet = Image.new("RGBA", (16 * 3 * 12 + 40, 16 * 12 + 20), hx("C6C6C6"))
-    for i, im in enumerate((p, s, g)):
-        sheet.alpha_composite(im.resize((192, 192), Image.NEAREST), (10 + i * 202, 10))
-    (ROOT / "images").mkdir(exist_ok=True)
-    sheet.save(ROOT / "images" / "textures.png")
 
 
 if __name__ == "__main__":
