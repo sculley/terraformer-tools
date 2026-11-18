@@ -1,0 +1,58 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Terraformer Tools",
+    "description": "Emerald pickaxe and spade that mine 1\u00d71, 2\u00d72 or 3\u00d73 instantly and never break.",
+    "uuid": "34b55295-d780-4f87-8d5d-f382e6c74cae",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      40
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "cc4f3e10-e591-49ce-a655-16e3705f5de2",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "172e368f-ba02-41a3-844c-9996337122d5",
+      "entry": "scripts/main.js",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.9.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.1.0"
+    },
+    {
+      "uuid": "35d582d3-88c3-4a0c-a377-d8158dac2a21",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Terraformer Tools Resources",
+    "description": "Textures and names for Terraformer Tools.",
+    "uuid": "35d582d3-88c3-4a0c-a377-d8158dac2a21",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      40
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "72dbd44f-53fb-4081-a9f1-cf46a5c8f8e3",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

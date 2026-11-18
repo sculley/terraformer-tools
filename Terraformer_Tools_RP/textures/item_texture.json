@@ -1,0 +1,15 @@
+{
+  "resource_pack_name": "terraformer_tools",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "terraformer_pickaxe": {
+      "textures": "textures/items/terraformer_pickaxe"
+    },
+    "terraformer_spade": {
+      "textures": "textures/items/terraformer_spade"
+    },
+    "terraformer_guide": {
+      "textures": "textures/items/terraformer_guide"
+    }
+  }
+}
